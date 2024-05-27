@@ -217,8 +217,9 @@ export function partStepsEventListeners(){
             el.style.zIndex = '1'
         });
         el.addEventListener('focusout', e  => {
-            el.style.position = 'static'
-            el.style.zIndex = '0'
+            let gparent = e.target.parentElement.parentElement
+            gparent.style.position = 'static'
+            gparent.style.zIndex = '0'
             denlargeAllImgVids()
         });
     })
@@ -419,11 +420,13 @@ export function partStepsEventListeners(){
             }
         })
         playVidClick.addEventListener('keydown', e => {
+            // e.preventDefault()
             let key = e.keyCode
             let left = 37
             let right = 39
             let parent = getStep(e.target)
             let vid = parent.querySelector('.step-vid > video')
+            console.log('pause')
             if(playing){
                 if(key == 32){
                     e.preventDefault()
@@ -432,7 +435,7 @@ export function partStepsEventListeners(){
                 }
                 if(key == left){
                     e.preventDefault()
-                    if(vid.currentTime <0){
+                    if(vid.currentTime <= 0){
                         vid.currentTime = 0
                         vid.play()
                     }
@@ -549,10 +552,13 @@ export function partStepsEventListeners(){
                 nxtBtn.focus()
             }
         }
-        if(letter == 'e'){
+        if(letter == 'e' && nxtBtn){
             console.log(nxtLessonBtn)
-            
             nxtBtn.focus()
+        }
+
+        if(letter == 'e' && !nxtBtn){
+            scrollTo(0,innerHeight)
         }
         if(mainTargetFocused){
             stepsFocused = true
@@ -566,8 +572,6 @@ export function partStepsEventListeners(){
                         if(h4){
                             if(num == h4.innerText[1]){
                                 el.focus()
-                                // console.log(letter)
-                                // console.log(h4s.length)
                             }
                         }
                     })

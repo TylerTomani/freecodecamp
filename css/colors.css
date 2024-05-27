@@ -22,6 +22,12 @@ pre.online {
 }
 .lb { color: cyan; font-style: bold; font-weight: 999;}
 .b { color: blue}
+.lsb {color: lightskyblue}
+.l {color: lime}
+.lg {color: lightgreen}
+.lsg {color: lightseagreen}
+.mg {color: mediumspringgreen}
+.msg {color: mediumseagreen}
 .c { color:cyan}
 .dc { color:darkcyan}
 .g { color: green}

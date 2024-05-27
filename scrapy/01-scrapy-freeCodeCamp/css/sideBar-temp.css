@@ -107,7 +107,7 @@ main {
     }
     .aside-main section  {
         padding-top: 2.5%;
-        margin: 2.5%;
+        margin: 2.5%{};
         font-size: 120% !important;
     }
     .aside-main section ul{

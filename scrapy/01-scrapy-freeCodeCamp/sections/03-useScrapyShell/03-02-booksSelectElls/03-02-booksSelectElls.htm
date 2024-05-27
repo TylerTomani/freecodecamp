@@ -128,6 +128,40 @@ class BookspiderSpider(scrapy.Spider):
                 <pre tabindex="1" class="copy-code">
 scrapy crawl bookspider</pre>
             </div>
+            <p class="r">
+                You must be in the same directory that contains the <code class="m"><i>scrapy.cfg</i></code>
+                file
+            </p>
+            <div class="code-container">
+                <pre tabindex="1" class="copy-code">
+cd /bookscraper
+                </pre>
+            </div>
+            
+            <div class="code-container">
+                <pre tabindex="1" class="copy-code">
+.
+├── <span class="m">bookscraper</span>
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-310.pyc
+│   │   └── settings.cpython-310.pyc
+│   ├── items.py
+│   ├── middlewares.py
+│   ├── pipelines.py
+│   ├── settings.py
+│   └── spiders
+│       ├── __init__.py
+│       ├── __pycache__
+│       │   ├── __init__.cpython-310.pyc
+│       │   └── bookspider.cpython-310.pyc
+│       └── bookspider.py
+└── <span class="m">scrapy.cfg</span>
+
+
+                </pre>
+            </div>
+            
             
         </div>
         <div class="step-vid">
